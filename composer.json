@@ -1,5 +1,5 @@
 {
-    "name": "setasign/fpdf",
+    "name": "kda/fpdf",
     "homepage": "http://www.fpdf.org",
     "description": "FPDF is a PHP class which allows to generate PDF files with pure PHP. F from FPDF stands for Free: you may use it for any kind of usage and modify it to suit your needs.",
     "type": "library",
@@ -13,12 +13,17 @@
         }
     ],
     "autoload": {
-        "classmap": [
-            "fpdf.php"
-        ]
+        "psr-4": {
+            "KDA\\FPDF\\": "."
+            
+        }
     },
     "require": {
         "ext-zlib": "*",
         "ext-gd": "*"
+    },
+    
+    "replace": {
+        "setasign/fpdf":"*"
     }
 }
